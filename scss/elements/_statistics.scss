@@ -1,0 +1,84 @@
+.statistic_title {
+  text-align: center;
+  color: $color-black;
+  @include font($font-raleway, 36px);
+  padding: 38px;
+
+  .statistic_container {
+    @include flex(center);
+    flex-direction: column;
+  }
+}
+
+.statistic_first,
+.statistic_second,
+.statistic_third {
+  @include flex(center);
+  flex-direction: column;
+  padding-bottom: 15px;
+}
+
+.statistic_text {
+  color: $color-black;
+  @include font($font-raleway, 20px);
+  letter-spacing: 5.96px;
+
+  font-weight: bold;
+}
+
+.statistic_des {
+  color: $color-grey;
+  @include font($font-raleway, 20px);
+}
+
+[class *=statistic_circle] {
+  border: 1px solid;
+  border-radius: 50%;
+  width: 63px;
+  height: 63px;
+  display: flex;
+  position: relative;
+}
+
+.statistic_circle {
+  &_first {
+    background-color: #FB3B64;
+    border-color: #FB3B64;
+  }
+
+  &_second {
+    background-color: #08A6E4;
+    border-color: #08A6E4;
+  }
+
+  &_third {
+    background-color: #55DFB4;
+    border-color: #55DFB4;
+  }
+}
+
+  .statistic_first_img {
+    position: absolute;
+    top: 0;
+    left: 45%;
+  }
+
+  .statistic_second_img {
+    position: absolute;
+    top: 14px;
+    left: 47%;
+  }
+
+  .statistic_third_img {
+    position: absolute;
+    top: 6px;
+    left: 50%;
+  }
+
+  @include desktop {
+    .statistic_container{
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+  }

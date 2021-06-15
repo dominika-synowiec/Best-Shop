@@ -1,0 +1,72 @@
+.banner_text {
+  @include flex(center);
+  flex-direction: column;
+
+  h1 {
+    color: $color-black;
+    @include font($font-raleway, 35px);
+    text-align: center;
+    padding-top: 80px;
+    font-weight: normal;
+  }
+
+  .banner_des {
+    color: $color-black;
+    @include font($font-open-sans, 16px);
+    padding: 20px;
+    padding-bottom: 28px;
+    text-align: center;
+    display: inline-block;
+  }
+
+  .banner_btn {
+    background-color: $color-primary;
+    box-shadow: 5px 10px 14px #07ACE629;
+    border-radius: 40px;
+    color: $color-white;
+    @include font($font-open-sans, 16px);
+    padding: 22px 92px;
+    text-decoration: none;
+    border: 1px solid #08A6E4;
+  }
+}
+.banner_img {
+  max-width: 700px;
+  height: 267px;
+  padding-top: 75px;
+
+  img {
+    width: 100%;
+    background-size: cover;
+  }
+}
+@include desktop{
+  .banner {
+    @include flex(center);
+    flex-direction: column;
+  }
+
+  h1 {
+    font-size: 49px;
+    padding-top: 130px;
+  }
+
+  .banner_des {
+    padding: 28px 38px;
+  }
+
+  .banner_btn {
+    padding: 22px 157px;
+  }
+
+  .banner_img {
+   @include flex(center);
+    max-width: 1342px;
+    height: 594px;
+
+    img {
+      max-width: 1342px;
+      height: 554px;
+    }
+  }
+}

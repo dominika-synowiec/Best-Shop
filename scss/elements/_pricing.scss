@@ -1,0 +1,185 @@
+.pricing_container {
+  @include flex(center);
+}
+
+.pricing_title {
+  @include font($font-raleway, 36px);
+  text-align: center;
+}
+
+.pricing_box {
+  @include flex(center);
+  flex-direction: column;
+  .pricing_box_container {
+    @include flex(space-between);
+  }
+}
+
+.pricing_box_header {
+  text-align: center;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  h5 {
+    @include font($font-raleway, 20px);
+    font-weight: bold;
+    padding-top: 40px;
+  }
+}
+
+.pricing_box_basic, .pricing_box_premium, .pricing_box_pro {
+  border-radius: 18px;
+  @include flex(center);
+  flex-direction: column;
+}
+
+.pricing_box{
+  padding: 10px;
+  &_basic {
+    border: 1px solid $color-redish;
+    margin-bottom: 40px;
+    .price {
+      color: $color-redish;
+      padding-bottom: 20px;
+    }
+  }
+
+  &_premium {
+    border: 1px solid $color-green;
+    margin-bottom: 40px;
+    .price {
+      color: $color-green;
+    }
+  }
+  &_pro{
+    border: 1px solid #07ACE6;
+    box-shadow: 5px 10px 27px #07ACE629;
+    width: 339px;
+    height: 297px;
+    margin-bottom: 40px;
+    .price {
+      color: #07ACE6;
+    }
+  }
+}
+.pricing_box_container{
+  width: 293px;
+  height: 251px;
+  padding-top: 20px;
+}
+.pricing_box .price {
+  @include font($font-open-sans,46px);
+}
+
+.limited {
+  @include font($font-raleway, 14px);
+  font-weight: bold;
+  padding-bottom: 58px;
+}
+
+.pricing_box_items {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  padding-left: 15px;
+  padding-top: 25px;
+
+  li {
+    padding-bottom: 15px;
+    text-decoration: none;
+    display: inline-block;
+  }
+}
+
+.pricing_item::before {
+  content: "";
+  width: 11px;
+  height: 11px;
+  display: inline-block;
+  margin-right: 10px;
+  background-image: url("../../images/Checkmark.svg");
+  border: 1px solid #55DFB4;
+
+}
+.pricing_item_not::before {
+  content: "X";
+  width: 11px;
+  height: 11px;
+  display: inline-block;
+  margin-right: 10px;
+  color: #EB476E;
+  border: 1px solid #EB476E;
+  background-position: top;
+}
+
+.pricing_box .btn {
+  position: relative;
+  @include font($font-open-sans, 13px);
+  text-decoration: none;
+  color: $color-white;
+  border-radius: 23px;
+  padding: 16px 57px;
+}
+
+.pricing_box_basic .btn {
+  background-color: #EB476E;
+  bottom: -22px;
+}
+
+.pricing_box_pro .btn {
+  background-color: #07ACE6;
+  box-shadow: 5px 10px 14px #07ACE629;
+  bottom: -12px;
+}
+
+.pricing_box_premium .btn {
+  background-color: #55DFB4;
+  bottom: -23px;
+}
+
+@include desktop {
+
+  .pricing_box {
+    @include flex(space-between);
+    flex-direction: row;
+  }
+  h5 {
+    font-size: 36px;
+    text-align: center;
+  }
+
+  .pricing-basic, .pricing-premium, .pricing-pro {
+    margin-right: 63px;
+  }
+  .pricing-box .pricing-basic {
+    width: 372px;
+    height: 461px;
+  }
+  .pricing-box .pricing-premium {
+    width: 372px;
+    height: 461px;
+  }
+  .pricing-box .pricing-pro {
+    width: 405px;
+    height: 500px;
+  }
+  h5 {
+    font-size: 21px;
+  }
+  .pricing-box .price {
+    font-size: 46px;
+    padding: 14px;
+  }
+  .pricing-box .limited {
+    padding-bottom: 20px;
+    padding-top: 5px;
+  }
+  .pricing-items li {
+    padding-bottom: 25px;
+  }
+  .pricing-basic .btn {
+    bottom: -20px;
+  }
+  .pricing-pro .btn {
+    bottom: -27px;
+  }
+}

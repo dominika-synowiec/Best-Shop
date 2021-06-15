@@ -1,0 +1,18 @@
+@mixin flex($content){
+  display: flex;
+  justify-content: $content;
+  align-items: center;
+}
+@mixin font($font, $size){
+  font-family: $font;
+  font-size: $size;
+}
+@mixin desktop {
+  @media (min-width: 792px) {
+    @content;
+  }
+}
+@mixin container() {
+  width: 1088px;
+  margin: 0 auto;
+}

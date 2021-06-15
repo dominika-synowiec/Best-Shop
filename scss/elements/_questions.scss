@@ -1,0 +1,120 @@
+.questions_container {
+  @include flex(center);
+  flex-direction: column;
+  padding-bottom: 38px;
+
+  .questions_text {
+    p:first-of-type {
+      @include font($font-raleway, 40px)
+    }
+
+    p:last-of-type {
+      @include font($font-open-sans, 16px);
+    }
+
+    .questions_contact {
+      padding-top: 15px;
+
+      a {
+        @include font($font-open-sans, 16px);
+        color: $color-grey;
+        text-decoration: none;
+        padding-bottom: 20px;
+      }
+    }
+  }
+}
+
+.questions_form {
+  .form_field {
+    display: flex;
+    flex-direction: column;
+    @include font($font-open-sans, 20px);
+
+    .form_label {
+      color: $color-primary;
+      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: 3px;
+      padding-top: 40px;
+    }
+
+    .form_input {
+      border: none;
+      border-bottom: 2px solid #95989A;
+      padding-top: 30px;
+    }
+  }
+}
+
+.form_checkbox {
+  display: block;
+  position: relative;
+  padding: 0 0 12px 40px;
+  cursor: pointer;
+  width: 277px;
+
+  p {
+    @include font($font-open-sans, 12px);
+    color: $color-primary-shadow;
+  }
+
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  .checkbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: $color-white;
+    border: 1px solid $color-primary-shadow;
+    border-radius: 4px;
+  }
+
+  input:checked ~ .checkbox {
+    background-image: url(../../images/Checkmark.svg);
+    background-position: center;
+    background-size: 50%;
+    background-repeat: no-repeat;
+  }
+}
+
+.form_button {
+  box-shadow: 5px 10px 14px #07ACE629;
+  border-radius: 35px;
+  background-color: $color-primary;
+  color: $color-white;
+  @include font($font-open-sans, 15px);
+  padding: 20px 97px;
+  margin: 20px 30px;
+  font-weight: bold;
+}
+
+@include desktop {
+  .questions_container {
+    display: flex;
+    flex-direction: row;
+    padding: 155px 59px;
+    justify-content: space-between;
+    align-items: normal;
+  }
+  .questions_contact {
+    display: flex;
+    a {
+      padding-right: 20px;
+    }
+  }
+  .agreement{
+    width: 340px;
+  }
+  .form_input{
+    width: 360px;
+  }
+}
